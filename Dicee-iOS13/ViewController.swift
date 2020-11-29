@@ -25,3 +25,8 @@ class ViewController: UIViewController {
 
 }
 
+// to create IBO (interface builder object) hold down control on UI component in storyboard and drag to the top but inside of view controller class. I can then use this connection to change things with code upon screen load.
+
+// to get the image icons above was typing "image literal" i can then select the image i want to show on loadup from the image options that appear (which come from images i have in side Assets.
+
+// the alpha property i have above is xcode speak for opacity.
