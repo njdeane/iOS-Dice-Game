@@ -14,12 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageView2: UIImageView!
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
+        let dice = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ]
         
-        diceImageView1.image = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ][Int.random(in: 0...5)]
-        diceImageView2.image = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ][Int.random(in: 0...5)]
+        diceImageView1.image = dice.randomElement()
+        diceImageView2.image = dice[Int.random(in: 0...5)]
 
     }
 }
 
 
-
+// dice.randomElement() is the same as dice[Int.random(in: 0...5)] shorthand for the win! but you can control the range with the latter.
